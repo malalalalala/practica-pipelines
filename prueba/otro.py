@@ -1,0 +1,3 @@
+import saludo
+
+saludo.saludar()

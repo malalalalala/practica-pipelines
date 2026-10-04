@@ -14,21 +14,22 @@ def read_rows(path):
 
 
 
-def validate_row (row):
-    if not (row.get('order_id')or "").strip():
-        return "no order id"
-    
-    try: 
-        amount= float(row.get('amount'))
-    except (ValueError, TypeError):    
+def validate_row(row):
+    if not (row.get("order_id") or "").strip():
+        return "order_id vacío"
+
+    try:
+        amount = float(row.get("amount"))
+    except (ValueError, TypeError):
         return "amount no es numero"
-    
+
     if amount < 0:
         return "amount negativo"
+
     try:
         datetime.fromisoformat(row.get("updated_at"))
-    except (ValueError, TypeError):    
-        return "amount no es numero"    
+    except (ValueError, TypeError):
+        return "updated_at no es una fecha válida"
 
     return None
 
