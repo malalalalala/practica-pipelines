@@ -1,0 +1,9 @@
+{
+  "total_by_marketplace": {
+    "MX": 100.0,
+    "BR": 50.5
+  },
+  "orders_by_status": {
+    "SHIPPED": 2
+  }
+}
