@@ -16,7 +16,7 @@ def test_keeps_most_recent_version_of_order(tmp_path):
         "A1,MX,SHIPPED,100,2026-01-02T10:00:00",
     ])
 
-    valid, quarantine, summary = clean_orders(path)
+    valid, _, _ = clean_orders(path)
 
     assert len(valid) == 1
     assert valid[0]["status"] == "SHIPPED"

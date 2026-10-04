@@ -77,22 +77,7 @@ def summarize(rows):
         "orders_by_status": orders_by_status,
     }
             
-# Paso 4: resumen
-def summarize(rows):
-    total_by_marketplace = {}
-    orders_by_status = {}
-    for row in rows:
-        marketplace = row["marketplace"]
-        total_by_marketplace[marketplace] = (
-            total_by_marketplace.get(marketplace, 0) + row["amount"]
-        )
-        status = row["status"]
-        orders_by_status[status] = orders_by_status.get(status, 0) + 1
-    return {
-        "total_by_marketplace": total_by_marketplace,
-        "orders_by_status": orders_by_status,
-    }
-     
+
     
 def clean_orders(path):
    
